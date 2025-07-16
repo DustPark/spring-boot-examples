@@ -24,8 +24,12 @@ public class HelloWorldController {
 
     @PostMapping("/email")
     public String getEmail(@RequestBody Student user) {
-        System.out.println(user.getName());
-        System.out.println(user.getPassportNumber());
+        if(user.getId() == null){
+            System.out.println("user가 null입니다.");
+        }else {
+            System.out.println(user.getName());
+            System.out.println(user.getPassportNumber()); 
+        }
         return user.getName().toLowerCase(); // user가 null일 가능성 있음!
     }
 }
