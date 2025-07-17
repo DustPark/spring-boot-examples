@@ -19,7 +19,7 @@ public class HelloWorldController {
 
     @GetMapping("/breakTime")
     public String breakTime() {
-        return "안녕히 계세요, Gwangjin!";
+        return "잠깐 쉬었다 해요, Gwangjin!";
     }
 
     @PostMapping("/email")
